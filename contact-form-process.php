@@ -67,12 +67,7 @@ if (isset($_POST['Email'])) {
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
-?>
 
-    <!-- include your success message below -->
-
-    Thank you for contacting us. We will be in touch with you very soon.
-
-<?php
+    header('Location: thanks.html');
 }
 ?>
